@@ -9,6 +9,9 @@ app.use(express.urlencoded({ limit: "10mb" }));
 import dotenv from "dotenv";
 import connect from "./connect";
 import route from "./route";
+import job from "./cron";
+
+job.start();
 
 dotenv.config();
 
